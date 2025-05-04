@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a0a0a;
+  color: #ccc;
+  font-family: 'Creepster', cursive, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+nav {
+  background: #000;
+  padding: 1rem;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  margin: 0 1rem;
+}
+nav ul li a {
+  color: crimson;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+nav ul li a.active {
+  text-decoration: underline;
+}
+.fog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: url('https://i.imgur.com/44j2W9F.png') repeat;
+  opacity: 0.03;
+  animation: moveFog 60s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+@keyframes moveFog {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(-500px, -500px); }
+}
+.centered {
+  text-align: center;
+  padding: 5rem 1rem;
+  position: relative;
+  z-index: 2;
+}
+.enter-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background: crimson;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.enter-button:hover {
+  background: darkred;
+}
+.places-list {
+  padding: 2rem;
+}
+.places-list ul {
+  list-style: none;
+  padding: 0;
+}
+.places-list ul li {
+  background: rgba(30, 0, 0, 0.7);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-left: 5px solid crimson;
+}
+.about-section {
+  padding: 4rem;
+  text-align: center;
+}
